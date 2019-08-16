@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.min.js"></script>
+        <title>Demo Properties Changes</title>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+        <h1 class="text-success"> Welcome to my page </h1>
+        <p class="text-muted">This is the test version </p>
+        </div>
+        <h3 class="text-danger">Click bên dưới để xem các hình ảnh khác:</h3>
+        <div class="jumbotron text-center">
+
+            <div>
+                <img id="hinhanh" src="meocon.jpg" alt="Hình ảnh"/>
+
+            </div>
+
+            <p>Hình:</p>
+            <input type="button" id="btn1" value="1"/>
+            <input type="button" id="btn2" value="2"/>
+            <input type="button" id="btn3" value="3"/>
+            <input type="button" id="btn4" value="Trở về hình cũ"/>
+
+            <script language="javascript">
+
+                var hinh = 'meocon.jpg';
+                var hinh1 = 'meocon1.jpg';
+                var hinh2 = 'meocon2.jpg';
+                var hinh3 = 'meocon3.jpg';
+
+                document.getElementById("btn1").onclick = function(){
+                    document.getElementById("hinhanh").src = hinh1;
+                };
+
+                document.getElementById("btn2").onclick = function(){
+                    document.getElementById("hinhanh").src = hinh2;
+                };
+
+                document.getElementById("btn3").onclick = function(){
+                    document.getElementById("hinhanh").src = hinh3;
+                };
+
+
+                document.getElementById("btn4").onclick = function(){
+                    document.getElementById("hinhanh").src = hinh;
+                };
+
+            </script>
+            </div>
+    </body>
+</html>

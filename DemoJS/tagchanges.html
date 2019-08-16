@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.min.js"></script>
+        <title>Demo Tag Changes</title>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+        <h1 class="text-success"> Welcome to my page </h1>
+        <p class="text-muted">This is the test version </p>
+        </div>
+        <h3 class="text-body">Ẩn và hiện thẻ div bằng Javascript</h3>
+
+        <div id="content" style="border: solid 1px; padding: 20px; background: #ddd;"><p class="text-danger">Đây là thông tin quan trọng. Bạn có muốn ẩn nó đi không?</p>
+        </div>
+        <br/>
+        <input type="button" id="btn1" value="Ẩn"/>
+        <input type="button" id="btn2" value="Hiển Thị"/>
+
+        <script language="javascript">
+
+            document.getElementById("btn1").onclick = function () {
+                document.getElementById("content").style.display = 'none';
+            };
+
+            document.getElementById("btn2").onclick = function () {
+                document.getElementById("content").style.display = 'block';
+            };
+
+        </script>
+    </body>
+</html>

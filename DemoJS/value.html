@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.min.js"></script>
+        <title>Demo Values Changes</title>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+        <h1 class="text-success"> Welcome to my page </h1>
+        <p class="text-muted">This is the test version </p>
+        </div>
+
+        <h2>Chọn giới tính của bạn:</h2>
+        <input type="radio" value="Name" name="gender" /> Name <br/>
+        <input type="radio" value="Nữ" name="gender" /> Nữ <br/>
+
+
+
+        <h2>What is your favorite?</h2>
+        <p class="text-muted">Bạn có thể chọn một hay nhiều sở thích khác nhau</p>
+        
+        <input type="checkbox" name="hobby" id="action" value="Đi chơi"/> <label>Đi chơi</label> <br/>
+        <script language="javascript">
+            document.getElementById('action').onclick = function(e){
+                if (this.checked){
+                    alert("Bạn vừa chọn Đi chơi");
+                }
+                else{
+                    alert("Bạn vừa bỏ chọn Đi chơi");
+                }
+            };
+        </script>
+        <input type="checkbox" name="hobby" id="action1" value="Đi du lịch"/> <label>Đi du lịch</label> <br/>
+        <script language="javascript">
+            document.getElementById('action1').onclick = function(e){
+                if (this.checked){
+                    alert("Bạn vừa chọn Đi du lịch");
+                }
+                else{
+                    alert("Bạn vừa bỏ chọn Đi du lịch");
+                }
+            };
+        </script>
+        <input type="checkbox" name="hobby" id="action2" value="Đi ăn"/> <label>Đi ăn</label> <br/>
+        <script language="javascript">
+            document.getElementById('action2').onclick = function(e){
+                if (this.checked){
+                    alert("Bạn vừa chọn Đi ăn");
+                }
+                else{
+                    alert("Bạn vừa bỏ chọn Đi ăn");
+                }
+            };
+        </script>
+        <input type="checkbox" name="hobby" id="action3" value="Đi siêu thị"/> <label>Đi siêu thị</label> <br/>
+        <script language="javascript">
+            document.getElementById('action3').onclick = function(e){
+                if (this.checked){
+                    alert("Bạn vừa chọn Đi siêu thị");
+                }
+                else{
+                    alert("Bạn vừa bỏ chọn Đi siêu thị");
+                }
+            };
+        </script>
+        <input type="checkbox" name="hobby" id="action4" value="Học lập trình"/> <label>Học lập trình</label> <br/>
+        <script language="javascript">
+            document.getElementById('action1').onclick = function(e){
+                if (this.checked){
+                    alert("Bạn vừa chọn Học lập trình");
+                }
+                else{
+                    alert("Bạn vừa bỏ chọn Học lập trình");
+                }
+            };
+        </script>
+        <input type="checkbox" name="hobby" id="action5" value="Đọc sách"/> <label>Đọc sách</label> 
+        <script language="javascript">
+            document.getElementById('action5').onclick = function(e){
+                if (this.checked){
+                    alert("Bạn vừa chọn Đọc sách");
+                }
+                else{
+                    alert("Bạn vừa bỏ chọn Đọc sách");
+                }
+            };
+        </script>
+            <br/> <br/>
+        
+        <input type="button" id="btn" value="Xem kết quả"/>
+        
+        <script language="javascript">
+            document.getElementById('btn').onclick = function()
+            {
+                var result = "";
+                var checkbox = document.getElementsByName("gender");
+                for (var i = 0; i < checkbox.length; i++){
+                    if (checkbox[i].checked === true){
+                         result += ' [' + checkbox[i].value + ']';
+                    }
+                }
+                console.log(result)
+                // Khai báo tham số
+                var checkbox = document.getElementsByName('hobby');
+                var result1 = "";
+                
+                // Lặp qua từng checkbox để lấy giá trị
+                for (var i = 0; i < checkbox.length; i++){
+                    if (checkbox[i].checked === true){
+                        result1 += ' [' + checkbox[i].value + ']';
+                    }
+                }
+                
+                // In ra kết quả
+                console.log(result1)
+                alert("Giới tính là: " + result + ", " + "Sở thích là: " + result1);
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.min.js"></script>
+        <title>Demo Background Changes</title>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+        <h1 class="text-success"> Welcome to my page </h1>
+        <p class="text-muted">This is the test version </p>
+        </div>
+        <h4 class="text-body">Thay đổi CSS cho thẻ HTML</h4>
+
+        <div id="content" style="padding: 20px; background: #f2f2f2; color: black; margin: 20px 0px;">
+            <p class="text-body">Ruby is an easy language to learn</p>
+        </div>
+
+        <input type="button" id="btn1" value="Đổi Backgroud màu đỏ"/>
+        <input type="button" id="btn2" value="Đổi Backgroud màu xanh"/>
+        <input type="button" id="btn3" value="Đổi Background màu vàng"/>
+        <input type="button" id="btn4" value="Đổi background màu xanh lá"/>
+
+        <script language="javascript">
+            var button1 = document.getElementById("btn1");
+            var button2 = document.getElementById("btn2");
+            var button3 = document.getElementById("btn3");
+            var button4 = document.getElementById("btn4")
+            var div = document.getElementById('content');
+
+            button1.onclick = function () {
+                div.style.background = "red";
+            };
+
+            button2.onclick = function () {
+                div.style.background = "blue";
+            };
+
+            button3.onclick = function () {
+                div.style.background = "yellow";
+            };
+
+            button4.onclick = function () {
+                div.style.background = "green";
+            };
+        </script>
+    </body>
+</html>

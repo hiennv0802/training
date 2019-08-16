@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    <title>Demo Alert</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+        <h1 class="text-success"> Welcome to my page </h1>
+        <p class="text-muted">This is the test version </p>
+        </div>
+        <h5 class="text-danger">Hãy nhấn vào nút bên dưới, bạn sẽ thấy điều bất ngờ</h5>
+        <div class="alert alert-danger">
+            <strong>Warning!</strong> You definitely want to click on it
+        </div>
+        <input type="button" id="btn" value="Click on"/>
+        <script language="javascript">
+            var button = document.getElementById("btn");
+            button.onclick = function(){
+            alert("You've been cheated ^^");
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.min.js"></script>
+        <title>Demo Content Changes</title>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+        <h1 class="text-success"> Welcome to my page </h1>
+        <p class="text-muted">This is the test version </p>
+        </div>
+        <h4 class="text-body">Thay đổi nội dung của thẻ HTML</h4>
+        <div class="alert alert-danger">
+            <strong>Warning!</strong> Hãy xem theo thứ tự từng nội dung một
+        </div>
+        <div id="content" style="padding: 20px; background: #f2f2f2; color: black; margin: 20px 0px;">
+            <p class="text-secondary">Nơi đây chứa các nội dung có thể hữu ích cho bạn. Hãy click để xem chúng </p>
+        </div>
+        <input type="button" id="btn1" value="Xem nội dung 1"/>
+        <input type="button" id="btn2" value="Xem nội dung 2"/>
+        <input type="button" id="btn3" value="Xem nội dung 3"/>
+        <input type="button" id="btn4" value="Xem nội dung 4"/>
+
+        <script language="javascript">
+            var button1 = document.getElementById("btn1");
+            var button2 = document.getElementById("btn2");
+            var button3 = document.getElementById("btn3");
+            var button4 = document.getElementById("btn4");
+            var div = document.getElementById('content');
+            
+            button1.onclick = function(){
+                div.innerHTML = 'Chào bạn! Có vẻ như bạn muốn xem nội dung của chúng tôi. Hãy click sang nội dung 2';
+            };
+            
+            button2.onclick = function(){
+                div.innerHTML = 'Good job. Please, Click on next content';
+            };
+
+            button3.onclick = function(){
+                div.innerHTML = 'Chưa đâu, phần hay lúc nào cũng ở cuối cùng, đi nào';
+            };
+
+            button4.onclick = function(){
+                div.innerHTML = 'Cảm ơn bạn đã tin tưởng chúng tôi. Đây là phần demo của tôi thôi';
+            };
+        </script>
+    </body>
+</html>
